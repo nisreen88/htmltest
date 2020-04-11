@@ -1,0 +1,60 @@
+<html>
+<head>
+   <title> my clock </title>
+<script language="javascript" type="text/javascript">
+
+
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+                    
+                       
+m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+
+
+}
+
+function checkTime(i){
+if (i < 10)
+{
+i="0"+i;
+}
+return i;
+
+}
+
+
+
+
+
+</script>
+</head>
+
+
+<body bgcolor="yellow" onLoad="startTime()">
+<h2>
+welcome to my Clock
+<br/>
+<div Time : id="txt">
+</div>
+
+<div style="background-color:green ; font-size:30 ; color:yellow ; text-transform:uppercase">
+      <form>
+
+        username <input type="text" name="t1" value="" ></input>
+      <br/>
+         password <input type="password" name="p1" value=""></input>
+
+      </form>
+</div>
+
+
+</body>
+</html>
